@@ -94,6 +94,11 @@ const createPhoneNumber = (num) => {
 
 console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
 
+
+
+
+
+
 const like = (names) => {
   if (names.length === 0) {
     return `no one likes this`;
@@ -108,25 +113,46 @@ const like = (names) => {
   }
 };
 
-console.log(like(["Pietro", "Manuel", "Max", "Matteo"]));*/
+console.log(like(["Pietro", "Manuel", "Max", "Matteo"]));
+
+
+
+
+
 
 const outlierFinder = (numbers) => {
-  let odds = numbers.filter(function (num) {
+  let odd = numbers.filter(function (num) {
     return num % 2;
   });
 
-  console.log(odds);
+  console.log(odd);
 
-  let evens = numbers.filter(function (num) {
+  let even = numbers.filter(function (num) {
     return !(num % 2);
   });
 
-  console.log(evens);
+  console.log(even);
 
-  let result = odds.length < evens.length ? odds[0] : evens[0];
+  let result = odd.length < even.length ? odd[0] : even[0];
 
   return result;
 };
 
 console.log(outlierFinder([2, 4, 0, 100, 4, 11, 2602, 36]));
-console.log(outlierFinder([160, 3, 1719, 19, 11, 13, -21]));
+console.log(outlierFinder([160, 3, 1719, 19, 11, 13, -21]));*/
+
+const string = "aba";
+
+function countElements(string) {
+  let obj = {};
+  string.split("").forEach((element) => {
+    if (Object.keys(obj).includes(element)) {
+      obj[element]++;
+    } else {
+      obj[element] = 1;
+    }
+  });
+  return obj;
+}
+
+console.log(countElements(string));
