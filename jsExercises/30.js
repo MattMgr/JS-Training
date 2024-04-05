@@ -1,9 +1,8 @@
-/* Write a JavaScript program to remove a character at the specified position
-in a given string and return the modified string.*/
+/*Write a JavaScript program to create another string from a given string
+ with the first character of the given string added to the front and back.*/
 
-function deleteCharAt(str, index) {
-    const char = str.charAt(index)
-    console.log(str.replace(char, ""))
+function firstToLast(str) {
+  return `${str[0]}${str}${str[0]}`;
 }
 
-deleteCharAt('bomboclat', 0)
+console.log(firstToLast("h"));

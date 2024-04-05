@@ -1,12 +1,13 @@
-//Write a JavaScript program to calculate the days left before Christmas.
+//Write a JavaScript program to calculate multiplication and division of two numbers (input from the user).
 
-function daysBeforeChristmas() {
-  const today = new Date();
-  const xmas = new Date(today.getFullYear(), 11, 25);
-  console.log(
-    Math.ceil((xmas.getTime() - today.getTime()) / (1000 * 60 * 60 * 24)) +
-      " giorni a Natale"
-  );
+let num1 = Math.ceil(Math.random() * 10);
+let num2 = Math.ceil(Math.random() * 10);
+
+function multDiv(input1, input2) {
+  const mult = input1 * input2;
+  const div = input1 / input2;
+
+  console.log(`multiplication is ${mult} and result of division is ${div}`);
 }
 
-daysBeforeChristmas();
+console.log(num1, num2);

@@ -1,23 +1,9 @@
-/*  Write a JavaScript program to get the current date.  
-Expected Output :
-mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy  
-*/
+//Write a JavaScript program to find the area of a triangle where three sides are 5, 6, 7.
 
-day = new Date(Date.now()).toLocaleString();
-console.log(day);
-
-function today() {
-  const today = new Date();
-  const yyyy = today.getFullYear();
-  let mm = today.getMonth() + 1;
-  let dd = today.getDate();
-
-  const day1 = mm + "-" + dd + "-" + yyyy;
-  const day2 = mm + "/" + dd + "/" + yyyy;
-  const day3 = dd + "-" + mm + "-" + yyyy;
-  const day4 = dd + "/" + mm + "/" + yyyy;
-
-  console.log(day1, day2, day3, day4);
+function areaTriangle(a, b, c) {
+  const semip = (a + b + c) / 2;
+  const area = Math.sqrt(semip * ((semip - a) * (semip - b) * (semip - c)));
+  console.log(+area.toFixed(2));
 }
 
-today();
+areaTriangle(5, 6, 7);

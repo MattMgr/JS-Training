@@ -1,20 +1,19 @@
-const str = "The quick brown fox jumps over the lazy dog";
-function pangramCheck(string) {
-  const alphabet = "abcdefghijklmnopqrstuvwsyz";
-  for (let i = 0; i < alphabet.length; i++) {
-    if (string.toLowerCase().indexOf(alphabet[i]) === -1) {
-      return false;
+function isTenMinutes(array) {
+  let total = 0;
+  if (array.length === 10) {
+    for (const dir of array) {
+      if (dir === "n") total += 1;
+      if (dir === "s") total -= 1;
+      if (dir === "e") total += 1;
+      if (dir === "w") total -= 1;
     }
-  }
-  return true;
+  } else return false;
+  return total == 0;
 }
 
-console.log(pangramCheck(str));
-/*
-function isPangram(string) {
-  const alphabet = "abcdefghijklmnopqrstuvwsyz";
-  const result = alphabet.split("").every((letter) => string.includes(letter));
-  return result;
-}
-
-console.log(isPangram("The quick brown fox jumps over the lazy dog"));*/
+console.log(isTenMinutes(["n", "s", "n", "s", "n", "s", "n", "s", "n", "s"]));
+console.log(
+  isTenMinutes(["w", "e", "w", "e", "w", "e", "w", "e", "w", "e", "w", "e"])
+);
+console.log(isTenMinutes(["n", "n", "n", "s", "n", "s", "n", "s", "n", "s"]));
+console.log(isTenMinutes(["n", "n", "n", "s", "n", "s", "e", "s", "w", "s"]));

@@ -1,9 +1,11 @@
-/*Write a JavaScript program to rotate the string 'w3resource' in the right direction.
-This is done by periodically removing one letter from the string end and attaching it to the front.*/
+//Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar.
 
-function reverse(word) {
-  const newWord = word.split("").reverse().join("");
-  console.log(newWord);
+function checkLeapYear(year) {
+  if ((0 == year % 4 && 0 != year % 100) || 0 == year % 400) {
+    console.log(year + " è un anno bisestile");
+  } else {
+    console.log(year + " non è un anno bisestile");
+  }
 }
 
-reverse("w3resource");
+checkLeapYear(2800);

@@ -1,9 +1,11 @@
-//Write a JavaScript program to check a pair of numbers and return true if one of the numbers is 50 or if their sum is 50.
+//Write a JavaScript program to check two given integers whether one is positive and another one is negative.
 
-function isFifty(x, y) {
-  if (x == 50 || y == 50 || x + y == 50) {
-    console.log(true);
-  } else console.log(false);
+function positiveNegative(x, y) {
+  if ((x < 0 && y > 0) || (x > 0 && y < 0)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
-isFifty(100, 50);
+console.log(positiveNegative(2, -2));

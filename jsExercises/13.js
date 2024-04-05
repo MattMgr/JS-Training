@@ -1,30 +1,23 @@
-/*const now = new Date();
-const day = now.getDay(); // returns a number representing the day of the week, starting with 0 for Sunday
-const hours = now.getHours();
-const minutes = now.getMinutes();
-console.log(`Today is day ${day} and the time is ${hours}:${minutes}.`);*/
+/*  Write a JavaScript program to get the current date.  
+Expected Output :
+mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy  
+*/
 
-function dateTime() {
-  const date = new Date();
-  const days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  const day = days[date.getDay()];
-  let hours = date.getHours();
-  let minutes = date.getMinutes();
-  let seconds = date.getSeconds();
-  const ampm = hours >= 12 ? "PM" : "AM";
-  hours -= 12;
-  minutes = minutes < 10 ? "0" + minutes : minutes;
-  seconds = seconds < 10 ? "0" + seconds : seconds;
-  console.log(`Today is: ${day}. `);
-  console.log(`${hours} ${ampm} : ${minutes} : ${seconds} `);
+day = new Date(Date.now()).toLocaleString();
+console.log(day);
+
+function today() {
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  let mm = today.getMonth() + 1;
+  let dd = today.getDate();
+
+  const day1 = mm + "-" + dd + "-" + yyyy;
+  const day2 = mm + "/" + dd + "/" + yyyy;
+  const day3 = dd + "-" + mm + "-" + yyyy;
+  const day4 = dd + "/" + mm + "/" + yyyy;
+
+  console.log(day1, day2, day3, day4);
 }
 
-dateTime();
+today();

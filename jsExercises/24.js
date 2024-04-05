@@ -1,11 +1,9 @@
-/* Write a JavaScript program to get the difference between a given number and 13,
- if the number is broader than 13 return double the absolute difference.*/
+//Write a JavaScript program to check a pair of numbers and return true if one of the numbers is 50 or if their sum is 50.
 
-function difference(num) {
-  const difference = 13 - num;
-  if (difference < 0) {
-    console.log(Math.abs(difference) * 2);
-  } else console.log(difference);
+function isFifty(x, y) {
+  if (x == 50 || y == 50 || x + y == 50) {
+    console.log(true);
+  } else console.log(false);
 }
 
-difference(10);
+isFifty(100, 50);

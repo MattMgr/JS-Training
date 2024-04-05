@@ -1,9 +1,9 @@
-//Write a JavaScript program to find the area of a triangle where three sides are 5, 6, 7.
+/*Write a JavaScript program to rotate the string 'w3resource' in the right direction.
+This is done by periodically removing one letter from the string end and attaching it to the front.*/
 
-function areaTriangle(a, b, c) {
-  const semip = (a + b + c) / 2;
-  const area = Math.sqrt(semip * ((semip - a) * (semip - b) * (semip - c)));
-  console.log(+area.toFixed(2));
+function reverse(word) {
+  const newWord = word.split("").reverse().join("");
+  console.log(newWord);
 }
 
-areaTriangle(5, 6, 7);
+reverse("w3resource");

@@ -1,11 +1,11 @@
-// Write a JavaScript program to check whether a given integer is within 20 of 100 or 400.
+/*Write a JavaScript program to create another string by adding "Py" in front of a given string.
+If the given string begins with "Py" return the original string.*/
 
-function isInRange(num) {
-  if (num >= 20 && num <= 100) {
-    console.log(num + " is between 20 and 100");
-  } else if (num >= 100 && num <= 400) {
-    console.log(num + " is between 100 and 400");
+function pyCheck(str) {
+  if (str.toLowerCase().substring(0, 2) === "py") {
+    return str;
   }
+  return "Py" + str;
 }
 
-isInRange(25);
+console.log(pyCheck("pyskate"));

@@ -1,11 +1,9 @@
-//Write a JavaScript program to check two given integers whether one is positive and another one is negative.
+/* Write a JavaScript program to remove a character at the specified position
+in a given string and return the modified string.*/
 
-function positiveNegative(x, y) {
-    if ((x < 0 && y > 0) || (x > 0 && y < 0)) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+function deleteCharAt(str, index) {
+  const char = str.charAt(index);
+  console.log(str.replace(char, ""));
+}
 
-  console.log(positiveNegative(2, -2));
+deleteCharAt("bomboclat", 0);

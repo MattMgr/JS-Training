@@ -1,21 +1,11 @@
-//Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit.
+/* Write a JavaScript program to get the difference between a given number and 13,
+ if the number is broader than 13 return double the absolute difference.*/
 
-function toFahr(c) {
-  return (c * 9) / 5 + 32;
+function difference(num) {
+  const difference = 13 - num;
+  if (difference < 0) {
+    console.log(Math.abs(difference) * 2);
+  } else console.log(difference);
 }
 
-console.log(toFahr(40));
-
-/*----------------------------------------------------------------------------------------------------*/
-
-function checkFahrCel(temperatures) {
-  if (temperatures.includes("°C")) {
-    temp = temperatures.replace("°C", "");
-    console.log((+temp * 9) / 5 + 32);
-  } else if (temperatures.includes("°F")) {
-    temp = temperatures.replace("°F", "");
-    console.log(((+temp - 32) * 5) / 9);
-  }
-}
-
-checkFahrCel("40 °C");
+difference(10);
