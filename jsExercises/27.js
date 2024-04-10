@@ -1,11 +1,11 @@
-/*Write a JavaScript program to create another string by adding "Py" in front of a given string.
-If the given string begins with "Py" return the original string.*/
+//Write a JavaScript program to check two given integers whether one is positive and another one is negative.
 
-function pyCheck(str) {
-  if (str.toLowerCase().substring(0, 2) === "py") {
-    return str;
+function positiveNegative(x, y) {
+  if ((x < 0 && y > 0) || (x > 0 && y < 0)) {
+    return true;
+  } else {
+    return false;
   }
-  return "Py" + str;
 }
 
-console.log(pyCheck("pyskate"));
+console.log(positiveNegative(2, -2));

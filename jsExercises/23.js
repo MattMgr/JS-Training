@@ -1,11 +1,11 @@
 /* Write a JavaScript program to get the difference between a given number and 13,
  if the number is broader than 13 return double the absolute difference.*/
 
-function add(num1, num2) {
-  sum = num1 + num2;
-  if (num1 === num2) {
-    console.log(sum * 3);
-  } else console.log(sum);
+function difference(num) {
+  const difference = 13 - num;
+  if (difference < 0) {
+    console.log(Math.abs(difference) * 2);
+  } else console.log(difference);
 }
 
-add(2, 2);
+difference(10);

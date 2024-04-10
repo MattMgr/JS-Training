@@ -1,11 +1,9 @@
-// Write a JavaScript program to check whether a given integer is within 20 of 100 or 400.
+//Write a JavaScript program to check a pair of numbers and return true if one of the numbers is 50 or if their sum is 50.
 
-function isInRange(num) {
-  if (num >= 20 && num <= 100) {
-    console.log(num + " is between 20 and 100");
-  } else if (num >= 100 && num <= 400) {
-    console.log(num + " is between 100 and 400");
-  }
+function isFifty(x, y) {
+  if (x == 50 || y == 50 || x + y == 50) {
+    console.log(true);
+  } else console.log(false);
 }
 
-isInRange(25);
+isFifty(100, 50);

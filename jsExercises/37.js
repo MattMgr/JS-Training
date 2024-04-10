@@ -1,16 +1,18 @@
-//Write a JavaScript program to find the closest value to 100 from two numerical values.
+/*Write a JavaScript program to find the largest of three given integers.*/
 
-function closeTo100(num1, num2) {
-  if (num1 != num2) {
-    const diff1 = Math.abs(num1 - 100);
+function max(num1, num2, num3) {
+  let maxNum;
+  if (num1 > num2) {
+    maxNum = num1;
+  } else maxNum = num2;
 
-    const diff2 = Math.abs(num2 - 100);
-
-    if (diff1 < diff2) {
-      return num1;
-    } else return num2;
+  if (num3 > maxNum) {
+    maxNum = num3;
   }
-  return `${num1}=${num2}`;
+
+  return maxNum;
 }
 
-console.log(closeTo100(-90, -80));
+console.log(max(25, 15, 20));
+
+//Solution 2 : Math.max(num1,num2,num3)

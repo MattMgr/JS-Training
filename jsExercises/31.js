@@ -1,10 +1,8 @@
-// Write a JavaScript program to check whether a given positive number is a multiple of 3 or 7.
+/*Write a JavaScript program to create another string from a given string
+ with the first character of the given string added to the front and back.*/
 
-function multiple37(x) {
-  if (Math.abs(x) % 3 == 0 || Math.abs(x) % 7 == 0) {
-    return true;
-  }
-  return false;
+function firstToLast(str) {
+  return `${str[0]}${str}${str[0]}`;
 }
 
-console.log(multiple37(-70));
+console.log(firstToLast("h"));

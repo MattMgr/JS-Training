@@ -1,18 +1,11 @@
-/*Write a JavaScript program to find the largest of three given integers.*/
+/* Write a JavaScript program to check whether a string "Script" appears at the 5th (index 4) position in a given string. 
+If "Script" appears in the string, return the string without "Script" otherwise return the original one. */
 
-function max(num1, num2, num3) {
-  let maxNum;
-  if (num1 > num2) {
-    maxNum = num1;
-  } else maxNum = num2;
-
-  if (num3 > maxNum) {
-    maxNum = num3;
+function checkString(str) {
+  if (str.toLowerCase().substring(10, 4) == "script") {
+    return str.substring(0, 4) + str.substring(10, str.length);
   }
-
-  return maxNum;
+  return str;
 }
 
-console.log(max(25, 15, 20));
-
-//Solution 2 : Math.max(num1,num2,num3)
+console.log(checkString("JavaScriptsggsggsggs"));

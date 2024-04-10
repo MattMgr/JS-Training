@@ -1,11 +1,10 @@
-/*Write a JavaScript program to check whether two given integer values are in the range 50..99 (inclusive).
-Return true if either of them falls within the range.*/
+//Write a JavaScript program to check whether a string starts with 'Java' if it does not otherwise.
 
-function checkRange(x, y) {
-  if ((x >= 50 && x <= 99) || (y >= 50 && y <= 99)) {
+function startWithJava(str) {
+  if (str.toLowerCase().startsWith("java")) {
     return true;
   }
   return false;
 }
 
-console.log(checkRange(40, 50));
+console.log(startWithJava("JavaExercise"));

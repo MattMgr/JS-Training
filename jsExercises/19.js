@@ -1,13 +1,13 @@
-//Write a JavaScript program to calculate multiplication and division of two numbers (input from the user).
+//Write a JavaScript program where the program takes a random integer between 1 and 10, and the user is then prompted to input a guess number.
+//The program displays a message "Good Work" if the input matches the guess number otherwise "Not matched".
 
-let num1 = Math.ceil(Math.random() * 10);
-let num2 = Math.ceil(Math.random() * 10);
+let inputNum = Math.floor(Math.random() * 10) + 1;
 
-function multDiv(input1, input2) {
-  const mult = input1 * input2;
-  const div = input1 / input2;
-
-  console.log(`multiplication is ${mult} and result of division is ${div}`);
+function compareNums(myNum) {
+  let pcNum = Math.floor(Math.random() * 10) + 1;
+  if (myNum == pcNum) {
+    console.log("Good work");
+  } else console.log("Not matched");
 }
 
-console.log(num1, num2);
+compareNums(inputNum);

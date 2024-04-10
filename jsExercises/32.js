@@ -1,10 +1,10 @@
-/*Write a JavaScript program to create a string from a given string.
-This is done by taking the last 3 characters and adding them at both the front and back. 
-The string length must be 3 or more.*/
+// Write a JavaScript program to check whether a given positive number is a multiple of 3 or 7.
 
-function last3(str) {
-  const last3 = str.substring(str.length - 3);
-  return `${last3}${str}${last3}`;
+function multiple37(x) {
+  if (Math.abs(x) % 3 == 0 || Math.abs(x) % 7 == 0) {
+    return true;
+  }
+  return false;
 }
 
-console.log(last3("hello"));
+console.log(multiple37(-70));

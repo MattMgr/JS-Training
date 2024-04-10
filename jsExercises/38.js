@@ -1,6 +1,16 @@
-/* Complete the function/method (depending on the language to return true/True when its argument
-is an array that has the same nesting structures and same corresponding length of nested arrays as the first array.*/
+//Write a JavaScript program to find the closest value to 100 from two numerical values.
 
-function checkNesting() {
-  console;
+function closeTo100(num1, num2) {
+  if (num1 != num2) {
+    const diff1 = Math.abs(num1 - 100);
+
+    const diff2 = Math.abs(num2 - 100);
+
+    if (diff1 < diff2) {
+      return num1;
+    } else return num2;
+  }
+  return `${num1}=${num2}`;
 }
+
+console.log(closeTo100(-90, -80));

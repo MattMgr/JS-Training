@@ -1,11 +1,11 @@
-//Write a JavaScript program to check two given integers whether one is positive and another one is negative.
+// Write a JavaScript program to check whether a given integer is within 20 of 100 or 400.
 
-function positiveNegative(x, y) {
-  if ((x < 0 && y > 0) || (x > 0 && y < 0)) {
-    return true;
-  } else {
-    return false;
+function isInRange(num) {
+  if (num >= 20 && num <= 100) {
+    console.log(num + " is between 20 and 100");
+  } else if (num >= 100 && num <= 400) {
+    console.log(num + " is between 100 and 400");
   }
 }
 
-console.log(positiveNegative(2, -2));
+isInRange(25);

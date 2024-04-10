@@ -1,9 +1,11 @@
-/* Write a JavaScript program to remove a character at the specified position
-in a given string and return the modified string.*/
+/*Write a JavaScript program to create another string by adding "Py" in front of a given string.
+If the given string begins with "Py" return the original string.*/
 
-function deleteCharAt(str, index) {
-  const char = str.charAt(index);
-  console.log(str.replace(char, ""));
+function pyCheck(str) {
+  if (str.toLowerCase().substring(0, 2) === "py") {
+    return str;
+  }
+  return "Py" + str;
 }
 
-deleteCharAt("bomboclat", 0);
+console.log(pyCheck("pyskate"));

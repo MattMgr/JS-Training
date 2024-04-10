@@ -1,11 +1,11 @@
-/* Write a JavaScript program to check whether a string "Script" appears at the 5th (index 4) position in a given string. 
-If "Script" appears in the string, return the string without "Script" otherwise return the original one. */
+/*Write a JavaScript program to check whether two given integer values are in the range 50..99 (inclusive).
+Return true if either of them falls within the range.*/
 
-function checkString(str) {
-  if (str.toLowerCase().substring(10, 4) == "script") {
-    return str.substring(0, 4) + str.substring(10, str.length);
+function checkRange(x, y) {
+  if ((x >= 50 && x <= 99) || (y >= 50 && y <= 99)) {
+    return true;
   }
-  return str;
+  return false;
 }
 
-console.log(checkString("JavaScriptsggsggsggs"));
+console.log(checkRange(40, 50));
